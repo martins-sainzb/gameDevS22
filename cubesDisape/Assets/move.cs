@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class move : MonoBehaviour
 {
-    public float moveSpeed = 10;
+    public float moveSpeed = 1000;
 
     public GameObject bulletPrefab;
     // Start is called before the first frame update
@@ -21,7 +21,7 @@ public class move : MonoBehaviour
 if (Input.GetButtonDown("Fire1")) {
             GameObject bullet = Instantiate(bulletPrefab, transform.position + Vector3.up*2, transform.rotation);
             Rigidbody rb = bullet.GetComponent<Rigidbody>();
-            rb.velocity = Vector3.forward * 30;
+            rb.velocity = Vector3.forward * 1000;
             Destroy(bullet, 4);
         }
    }
